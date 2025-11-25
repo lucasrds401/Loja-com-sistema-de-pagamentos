@@ -21,7 +21,8 @@ public class Main {
                 x.vender();
                 break;
             case 3:
-                JOptionPane.showMessageDialog(null, "oi");
+                x.relatorio();
+                break;
             case 4:
                 JOptionPane.showMessageDialog(null, "Saindo do Sistema...");
                 break;

@@ -1,4 +1,4 @@
-    package Loja;
+package Loja;
 import javax.swing.JOptionPane;
 
 public class MenuLoja{
@@ -94,7 +94,25 @@ public class MenuLoja{
 
         totalvendido += valorCompra;
 
-        JOptionPane.showMessageDialog(null, "Relatório da venda \nproduto: " + p.getDescricao()+ "\nQuantidade: " + qntd + "\nValor total: R$" + valorCompra);
-    }        
-    
+    }
+        public void relatorio(){
+    JOptionPane.showMessageDialog(
+        null,
+        "RELATÓRIO\nLoja: " + nome +
+        "\nLocalização: " + localizacao +
+        "\nTotal vendido: R$" + totalvendido
+    );
+
+    for(int i = 0; i < produtos.length; i++){
+        Produto p = produtos[i];
+
+        if(p != null && p.getEstoque() > 0){
+            JOptionPane.showMessageDialog(null, "Relatório do " + (i + 1) + "° produto:" + "\nProduto: " + p.getDescricao() + "\nCódigo: " + p.getCodigoBarras() +
+                "\nPreço: R$" + p.getPreco() +
+                "\nEstoque: " + p.getEstoque()
+            );
+        }
+    }
+}
+
 }
