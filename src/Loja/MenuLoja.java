@@ -33,8 +33,8 @@ public class MenuLoja{
     }
 
     public void cadastrarProduto(){
-        for(int i = 0; i < produtos.length; i++){
-            JOptionPane.showMessageDialog(null, "Cadastro do "+ (i+1) + "Produto");
+        for(int i = 0; i < produtos.length; i++){   
+            JOptionPane.showMessageDialog(null, "Cadastro do "+ (i+1) + "° Produto");
             String codigo = JOptionPane.showInputDialog("Digite o código de barras: ");
             String descricao = JOptionPane.showInputDialog("Digite a descricao do produto: ");
             double preco = Double.parseDouble(JOptionPane.showInputDialog("Digite o preço do produto: "));
@@ -96,12 +96,7 @@ public class MenuLoja{
 
     }
         public void relatorio(){
-    JOptionPane.showMessageDialog(
-        null,
-        "RELATÓRIO\nLoja: " + nome +
-        "\nLocalização: " + localizacao +
-        "\nTotal vendido: R$" + totalvendido
-    );
+    JOptionPane.showMessageDialog(null, "RELATÓRIO\nLoja: " + nome + "\nLocalização: " + localizacao + "\nTotal vendido: R$" + totalvendido);
 
     for(int i = 0; i < produtos.length; i++){
         Produto p = produtos[i];
