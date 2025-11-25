@@ -2,8 +2,7 @@ package Loja;
 import javax.swing.JOptionPane;
 
 public class MenuLoja{
-    private String nome;
-    private String localizacao;
+    private String nome, localizacao;
     private Produto[] produtos = new Produto[5];
     private int totalvendido = 0;
 
@@ -62,7 +61,7 @@ public class MenuLoja{
         int qntd = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de produtos para comprar: "));
 
         while(qntd > p.getEstoque()){
-            qntd = Integer.parseInt(JOptionPane.showInputDialog("Só temos " + p.getEstoque() + "Desse produto, digite um valor válido: "));
+            qntd = Integer.parseInt(JOptionPane.showInputDialog("Só temos " + p.getEstoque() + " Desse produto, digite um valor válido: "));
         }
 
         double valorCompra = p.getPreco() * qntd;

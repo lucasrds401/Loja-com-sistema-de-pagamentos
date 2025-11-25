@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Pix extends Pagamento{
     String id;
+    
     public Pix(String id, double valor){
         super(valor);
         this.id = id;

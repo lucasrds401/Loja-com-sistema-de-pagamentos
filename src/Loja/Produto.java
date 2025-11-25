@@ -1,8 +1,7 @@
     package Loja;
 
     public class Produto {
-        private String codigoBarras;
-        private String descricao;
+        private String codigoBarras, descricao;
         private Double preco;
         private int estoque;
 
